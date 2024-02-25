@@ -1,0 +1,127 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  box-sizing: border-box;
+}
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  background-image: linear-gradient(to left top, #343a40, #3b5bdb);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.player--active {
+  background-color: rgba(255, 255, 255, 0.396);
+}
+.box {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.318);
+  border-radius: 1rem;
+  height: 55rem;
+  width: 90rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.21);
+}
+.current {
+  background-color: #3b5bdb;
+  width: 17rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 9rem;
+}
+.name {
+  color: #333;
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+.score {
+  font-size: 7rem;
+  color: #3b5bdb;
+  font-weight: 500;
+}
+
+.current-text {
+  font-size: 1.5rem;
+  color: rgba(219, 214, 214, 0.812);
+}
+.current-point {
+  font-size: 2.5rem;
+}
+.player {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+a {
+  text-decoration: none;
+}
+
+.btn:visited,
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+  background-color: rgba(255, 255, 255, 0.707);
+  backdrop-filter: blur(10px);
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.dice {
+  position: absolute;
+  left: 50%;
+  top: 16.5rem;
+  transform: translateX(-50%);
+  height: 10rem;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+.btn--new {
+  top: 4rem;
+}
+.btn--roll {
+  top: 37.3rem;
+}
+.btn--hold {
+  top: 43.1rem;
+}
+.hidden {
+  display: none;
+}
+.player--winner {
+  color: #3b5bdb;
+  background-color: #2a2e31;
+}
+
+.btn--new:hover {
+  background-color: rgba(255, 255, 255, 0.966);
+}
+.btn--roll:hover {
+  background-color: rgba(255, 255, 255, 0.966);
+}
+.btn--hold:hover {
+  background-color: rgba(255, 255, 255, 0.966);
+}
