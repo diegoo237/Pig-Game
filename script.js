@@ -43,13 +43,10 @@ btnHold.addEventListener("click", function () {
   document.getElementById(`score--${activePlayer}`).textContent =
     scores[activePlayer];
   //vendo se o jogador tem 100 pontos
-  if (scores[activePlayer] >= 100) {
+  if (scores[activePlayer] >= 50) {
     document
       .querySelector(`.player--${activePlayer}`)
       .classList.add("player--winner");
-    document
-      .querySelector(`.player--${activePlayer}`)
-      .classList.remove("player--active");
   } else {
     //trocando para o proximo player
     switchPlayer();
@@ -66,4 +63,7 @@ btnNell.addEventListener("click", function () {
   document.getElementById("score--0").textContent = 0;
   document.getElementById("score--1").textContent = 0;
   diceEL.classList.add("hidden");
+  document
+    .querySelector(`.player--${activePlayer}`)
+    .classList.remove("player--winner");
 });
